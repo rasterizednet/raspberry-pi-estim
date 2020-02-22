@@ -1,0 +1,1025 @@
+EESchema Schematic File Version 4
+LIBS:raspbi_estim_controller-cache
+EELAYER 29 0
+EELAYER END
+$Descr User 12505 8268
+encoding utf-8
+Sheet 2 3
+Title "PSU"
+Date "2019-05-17"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6550 4050 6650 4050
+Wire Wire Line
+	5150 2450 5650 2450
+Wire Wire Line
+	5650 2450 5800 2450
+Wire Wire Line
+	5150 2550 5150 2450
+Connection ~ 5650 2450
+Connection ~ 2150 2450
+Wire Wire Line
+	6550 3950 6650 3950
+Wire Wire Line
+	7050 2650 7050 2450
+Connection ~ 6250 2450
+Connection ~ 7050 2450
+$Comp
+L Device:R_US R?
+U 1 1 49F62BA8
+P 4850 2800
+AR Path="/49F62BA8" Ref="R?"  Part="1" 
+AR Path="/5CB40B9E/49F62BA8" Ref="R1"  Part="1" 
+F 0 "R1" H 4700 2859 59  0000 L BNN
+F 1 "100K" H 4700 2670 59  0000 L BNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 4850 2800 50  0001 C CNN
+F 3 "" H 4850 2800 50  0001 C CNN
+F 4 "Vishay" H 4850 2800 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206100KFKEAC" H 4850 2800 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "71-CRCW1206100KFKEAC" H 4850 2800 50  0001 C CNN "Mouser Part Number"
+	1    4850 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 FE226B75
+P 4850 3400
+AR Path="/FE226B75" Ref="R?"  Part="1" 
+AR Path="/5CB40B9E/FE226B75" Ref="R3"  Part="1" 
+F 0 "R3" H 4700 3459 59  0000 L BNN
+F 1 "7.87K" H 4700 3270 59  0000 L BNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 4850 3400 50  0001 C CNN
+F 3 "" H 4850 3400 50  0001 C CNN
+F 4 "Panasonic" H 4850 3400 50  0001 C CNN "Manufacturer_Name"
+F 5 "ERJ-8ENF7871V" H 4850 3400 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "667-ERJ-8ENF7871V" H 4850 3400 50  0001 C CNN "Mouser Part Number"
+	1    4850 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 E53A484A
+P 4850 3750
+AR Path="/E53A484A" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/E53A484A" Ref="#GND04"  Part="1" 
+F 0 "#GND04" H 4850 3750 50  0001 C CNN
+F 1 "GND" H 4950 3650 59  0000 L BNN
+F 2 "" H 4850 3750 50  0001 C CNN
+F 3 "" H 4850 3750 50  0001 C CNN
+	1    4850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 A44C21B7
+P 5650 3000
+AR Path="/A44C21B7" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/A44C21B7" Ref="#GND06"  Part="1" 
+F 0 "#GND06" H 5650 3000 50  0001 C CNN
+F 1 "GND" H 5750 2900 59  0000 L BNN
+F 2 "" H 5650 3000 50  0001 C CNN
+F 3 "" H 5650 3000 50  0001 C CNN
+	1    5650 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 D027D65F
+P 6650 4250
+AR Path="/D027D65F" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/D027D65F" Ref="#GND08"  Part="1" 
+F 0 "#GND08" H 6650 4250 50  0001 C CNN
+F 1 "GND" H 6350 4150 59  0000 L BNN
+F 2 "" H 6650 4250 50  0001 C CNN
+F 3 "" H 6650 4250 50  0001 C CNN
+	1    6650 4250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 2B74A96F
+P 1600 2950
+AR Path="/2B74A96F" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/2B74A96F" Ref="#GND01"  Part="1" 
+F 0 "#GND01" H 1600 2950 50  0001 C CNN
+F 1 "GND" H 1700 2850 59  0000 L BNN
+F 2 "" H 1600 2950 50  0001 C CNN
+F 3 "" H 1600 2950 50  0001 C CNN
+	1    1600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 057C4BD5
+P 2150 2950
+AR Path="/057C4BD5" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/057C4BD5" Ref="#GND02"  Part="1" 
+F 0 "#GND02" H 2150 2950 50  0001 C CNN
+F 1 "GND" H 2250 2850 59  0000 L BNN
+F 2 "" H 2150 2950 50  0001 C CNN
+F 3 "" H 2150 2950 50  0001 C CNN
+	1    2150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 F278BC0E
+P 6250 3000
+AR Path="/F278BC0E" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/F278BC0E" Ref="#GND07"  Part="1" 
+F 0 "#GND07" H 6250 3000 50  0001 C CNN
+F 1 "GND" H 6350 2900 59  0000 L BNN
+F 2 "" H 6250 3000 50  0001 C CNN
+F 3 "" H 6250 3000 50  0001 C CNN
+	1    6250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #P+?
+U 1 1 6A081B6E
+P 11350 1950
+AR Path="/6A081B6E" Ref="#P+?"  Part="1" 
+AR Path="/5CB40B9E/6A081B6E" Ref="#P+04"  Part="1" 
+F 0 "#P+04" H 11350 1950 50  0001 C CNN
+F 1 "+5V" V 11250 1950 59  0000 L BNN
+F 2 "" H 11350 1950 50  0001 C CNN
+F 3 "" H 11350 1950 50  0001 C CNN
+	1    11350 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 88676885
+P 5150 2650
+AR Path="/88676885" Ref="C?"  Part="1" 
+AR Path="/5CB40B9E/88676885" Ref="C3"  Part="1" 
+F 0 "C3" H 5190 2675 59  0000 L BNN
+F 1 "0.1uF" H 5190 2485 59  0000 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5150 2650 50  0001 C CNN
+F 3 "" H 5150 2650 50  0001 C CNN
+F 4 "Murata" H 5150 2650 50  0001 C CNN "Manufacturer_Name"
+F 5 "GCM155R71E104KE02D" H 5150 2650 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "81-GCM155R71E104KE2D" H 5150 2650 50  0001 C CNN "Mouser Part Number"
+	1    5150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 2CF0FB45
+P 5150 2950
+AR Path="/2CF0FB45" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/2CF0FB45" Ref="#GND05"  Part="1" 
+F 0 "#GND05" H 5150 2950 50  0001 C CNN
+F 1 "GND" H 5250 2850 59  0000 L BNN
+F 2 "" H 5150 2950 50  0001 C CNN
+F 3 "" H 5150 2950 50  0001 C CNN
+	1    5150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 C8DDE19D
+P 2650 2700
+AR Path="/C8DDE19D" Ref="C?"  Part="1" 
+AR Path="/5CB40B9E/C8DDE19D" Ref="C2"  Part="1" 
+F 0 "C2" H 2690 2725 59  0000 L BNN
+F 1 "0.1uF" H 2690 2535 59  0000 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2650 2700 50  0001 C CNN
+F 3 "" H 2650 2700 50  0001 C CNN
+F 4 "Murata" H 2650 2700 50  0001 C CNN "Manufacturer_Name"
+F 5 "GCM155R71E104KE02D" H 2650 2700 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "81-GCM155R71E104KE2D" H 2650 2700 50  0001 C CNN "Mouser Part Number"
+	1    2650 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 6E5BE941
+P 2650 2950
+AR Path="/6E5BE941" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/6E5BE941" Ref="#GND03"  Part="1" 
+F 0 "#GND03" H 2650 2950 50  0001 C CNN
+F 1 "GND" H 2550 2750 59  0000 L BNN
+F 2 "" H 2650 2950 50  0001 C CNN
+F 3 "" H 2650 2950 50  0001 C CNN
+	1    2650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 47931690
+P 7050 3050
+AR Path="/47931690" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/47931690" Ref="#GND09"  Part="1" 
+F 0 "#GND09" H 7050 3050 50  0001 C CNN
+F 1 "GND" H 7150 2950 59  0000 L BNN
+F 2 "" H 7050 3050 50  0001 C CNN
+F 3 "" H 7050 3050 50  0001 C CNN
+	1    7050 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2450 2650 2450
+Connection ~ 5150 2450
+$Comp
+L Diode:1N4004 D1
+U 1 1 5CBCEE77
+P 5950 2450
+F 0 "D1" H 5950 2234 50  0000 C CNN
+F 1 "583-FM4004W-W" H 5950 2325 50  0000 C CNN
+F 2 "mk312-smd-footprints:DO-214AC" H 6400 2450 50  0001 L CNN
+F 3 "http://www.rectron.com/public/product_datasheets/fm4001w-fm4007w.pdf" H 6400 2350 50  0001 L CNN
+F 4 "Rectifiers 1A, 400V" H 6400 2250 50  0001 L CNN "Description"
+F 5 "2.31" H 6400 2150 50  0001 L CNN "Height"
+F 6 "Rectron" H 6400 2050 50  0001 L CNN "Manufacturer_Name"
+F 7 "FM4004W-W" H 6400 1950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "583-FM4004W-W" H 6400 1850 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=583-FM4004W-W" H 6400 1750 50  0001 L CNN "Mouser Price/Stock"
+	1    5950 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4004 D2
+U 1 1 5CBD152F
+P 7050 2800
+F 0 "D2" V 7004 2879 50  0000 L CNN
+F 1 "583-FM4004W-W" V 7095 2879 50  0000 L CNN
+F 2 "mk312-smd-footprints:DO-214AC" H 7500 2800 50  0001 L CNN
+F 3 "http://www.rectron.com/public/product_datasheets/fm4001w-fm4007w.pdf" H 7500 2700 50  0001 L CNN
+F 4 "Rectifiers 1A, 400V" H 7500 2600 50  0001 L CNN "Description"
+F 5 "2.31" H 7500 2500 50  0001 L CNN "Height"
+F 6 "Rectron" H 7500 2400 50  0001 L CNN "Manufacturer_Name"
+F 7 "FM4004W-W" H 7500 2300 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "583-FM4004W-W" H 7500 2200 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=583-FM4004W-W" H 7500 2100 50  0001 L CNN "Mouser Price/Stock"
+	1    7050 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 2450 6250 2450
+Wire Wire Line
+	6650 3550 6650 3950
+Wire Wire Line
+	1550 2450 2150 2450
+Wire Wire Line
+	1550 2650 1600 2650
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5CBC737B
+P 1250 2550
+F 0 "J1" H 1305 2867 50  0000 C CNN
+F 1 "Barrel_Jack_MountingPin" H 1305 2776 50  0000 C CNN
+F 2 "mk312-smd-footprints:DJ_Jack_PJ-003A" H 1300 2510 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/670/pj-002a-1312176.pdf" H 1300 2510 50  0001 C CNN
+F 4 "CUI" H 1250 2550 50  0001 C CNN "Manufacturer_Name"
+F 5 "PJ-003A" H 1250 2550 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "490-PJ-003A" H 1250 2550 50  0001 C CNN "Mouser Part Number"
+	1    1250 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C4
+U 1 1 5CBC86C0
+P 5650 2750
+F 0 "C4" H 5765 2796 50  0000 L CNN
+F 1 "1000uF" H 5765 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 5650 2750 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/293/e-ucm-883824.pdf" H 5650 2750 50  0001 C CNN
+F 4 "Panasonic" H 5650 2750 50  0001 C CNN "Manufacturer_Name"
+F 5 "EEV-FK1E102Q" H 5650 2750 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "667-EEV-FK1E102Q" H 5650 2750 50  0001 C CNN "Mouser Part Number"
+	1    5650 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C5
+U 1 1 5CBC8766
+P 6250 2750
+F 0 "C5" H 6365 2796 50  0000 L CNN
+F 1 "1000uF" H 6365 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 6250 2750 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/293/e-ucm-883824.pdf" H 6250 2750 50  0001 C CNN
+F 4 "Panasonic" H 6250 2750 50  0001 C CNN "Manufacturer_Name"
+F 5 "EEV-FK1E102Q" H 6250 2750 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "667-EEV-FK1E102Q" H 6250 2750 50  0001 C CNN "Mouser Part Number"
+	1    6250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse F1
+U 1 1 5CBCDB93
+P 6650 3400
+F 0 "F1" H 6738 3446 50  0000 L CNN
+F 1 "1A Polyfuse" H 6738 3355 50  0000 L CNN
+F 2 "Fuse:Fuse_2920_7451Metric" H 6700 3200 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/643/0ZCF_Nov2016-1133542.pdf" H 6650 3400 50  0001 C CNN
+F 4 "Bel Fuse" H 6650 3400 50  0001 C CNN "Manufacturer_Name"
+F 5 "0ZCF0100AF2A" H 6650 3400 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "530-0ZCF0100AF2A" H 6650 3400 50  0001 C CNN "Mouser Part Number"
+	1    6650 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2450 6650 2450
+Wire Wire Line
+	6650 3250 6650 2450
+Connection ~ 6650 2450
+Wire Wire Line
+	6650 2450 7050 2450
+Wire Wire Line
+	6650 4050 6650 4250
+$Comp
+L Device:C_Small C1
+U 1 1 5D39105D
+P 2150 2700
+F 0 "C1" H 2242 2746 50  0000 L CNN
+F 1 "10uF" H 2242 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2150 2700 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1181-947564.pdf" H 2150 2700 50  0001 C CNN
+F 4 "Taiyo Yuden" H 2150 2700 50  0001 C CNN "Manufacturer_Name"
+F 5 "TMK212BBJ106MG-T" H 2150 2700 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "963-TMK212BBJ106MG-T" H 2150 2700 50  0001 C CNN "Mouser Part Number"
+	1    2150 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2450 2150 2600
+Wire Wire Line
+	2150 2800 2150 2950
+Wire Wire Line
+	2650 2450 2650 2600
+Wire Wire Line
+	2650 2800 2650 2950
+Wire Wire Line
+	5150 2750 5150 2950
+Wire Wire Line
+	7050 3050 7050 2950
+$Comp
+L mk312:SW_SPDT_POWER S1
+U 1 1 5DFCEBD8
+P 7900 2450
+F 0 "S1" H 7900 2125 50  0000 C CNN
+F 1 "POWER" H 7900 2216 50  0000 C CNN
+F 2 "mk312-smd-footprints:SW_E-Switch-LC-1258" H 7900 2450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/140/100-1079940.pdf" H 7900 2450 50  0001 C CNN
+F 4 "E-Switch" H 7900 2450 50  0001 C CNN "Manufacturer_Name"
+F 5 "LC1258EENP" H 7900 2450 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "612-LC1258EENP" H 7900 2450 50  0001 C CNN "Mouser Part Number"
+	1    7900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5DFE01AE
+P 6350 3950
+F 0 "J2" H 6270 4167 50  0000 C CNN
+F 1 "+12V Battery" H 6270 4076 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 6350 3950 50  0001 C CNN
+F 3 "~" H 6350 3950 50  0001 C CNN
+	1    6350 3950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3000 5650 2900
+Wire Wire Line
+	5650 2450 5650 2600
+Wire Wire Line
+	6250 2450 6250 2600
+Wire Wire Line
+	6250 2900 6250 3000
+$Comp
+L power:+VDC #PWR01
+U 1 1 5CEB4B05
+P 2150 1950
+F 0 "#PWR01" H 2150 1850 50  0001 C CNN
+F 1 "+VDC" H 2150 2225 50  0000 C CNN
+F 2 "" H 2150 1950 50  0001 C CNN
+F 3 "" H 2150 1950 50  0001 C CNN
+	1    2150 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1950 2150 2450
+Wire Wire Line
+	8450 1950 8450 2450
+Wire Wire Line
+	7050 2450 7500 2450
+Wire Wire Line
+	7500 2450 7500 2750
+Connection ~ 7500 2450
+Wire Wire Line
+	7500 2450 7700 2450
+Wire Wire Line
+	8100 2350 8250 2350
+Wire Wire Line
+	8250 2350 8250 2450
+Wire Wire Line
+	8250 2450 8450 2450
+Wire Wire Line
+	8200 2550 8200 2750
+Wire Wire Line
+	7500 2750 8200 2750
+Wire Wire Line
+	8100 2550 8200 2550
+Wire Wire Line
+	1600 2650 1600 2950
+Wire Wire Line
+	1550 2550 1600 2550
+Wire Wire Line
+	1600 2550 1600 2650
+Connection ~ 1600 2650
+$Comp
+L raspbi-estim:ACT4060ASH-T U1
+U 1 1 5CF660FF
+P 9550 2050
+F 0 "U1" H 9550 2475 50  0000 C CNN
+F 1 "ACT4060ASH-T" H 9550 2384 50  0000 C CNN
+F 2 "Package_SO:SOP-8_3.76x4.96mm_P1.27mm" H 9600 1600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/631/activesemi_ACT4060A-1216080.pdf" H 9550 2050 50  0001 C CNN
+F 4 "Active-Semi" H 9550 2050 50  0001 C CNN "Manufacturer_Name"
+F 5 "ACT4060ASH-T" H 9550 2050 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "107-ACT4060ASH-T" H 9550 2050 50  0001 C CNN "Mouser Part Number"
+	1    9550 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5CF6C3F4
+P 11100 2450
+F 0 "C15" H 11008 2404 50  0000 R CNN
+F 1 "22uF 10V" H 11008 2495 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 11100 2450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/400/lcc_commercial_general_en-837201.pdf" H 11100 2450 50  0001 C CNN
+F 4 "TDK" H 11100 2450 50  0001 C CNN "Manufacturer_Name"
+F 5 "C3225X7R1A226M230AC" H 11100 2450 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "810-C3225X7R1A226M10" H 11100 2450 50  0001 C CNN "Mouser Part Number"
+	1    11100 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5CF6D073
+P 9600 2650
+F 0 "C9" H 9692 2696 50  0000 L CNN
+F 1 "2.2nF 6.3V" H 9692 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9600 2650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 9600 2650 50  0001 C CNN
+F 4 "KEMET" H 9600 2650 50  0001 C CNN "Manufacturer_Name"
+F 5 "C0603C222K9RACTU" H 9600 2650 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "80-C0603C222K9R" H 9600 2650 50  0001 C CNN "Mouser Part Number"
+	1    9600 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 5CF6DAD2
+P 10100 1650
+F 0 "C12" H 10192 1696 50  0000 L CNN
+F 1 "10nF 50V" H 10192 1605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 1650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/UPY-AC_NP0X7R_16V-to-630V_11-1511105.pdf" H 10100 1650 50  0001 C CNN
+F 4 "Yageo" H 10100 1650 50  0001 C CNN "Manufacturer_Name"
+F 5 "AC0603KRX7R9BB103" H 10100 1650 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-AC603KRX7R9BB103" H 10100 1650 50  0001 C CNN "Mouser Part Number"
+	1    10100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C6
+U 1 1 5CF6EB5B
+P 8850 2500
+F 0 "C6" H 8941 2546 50  0000 L CNN
+F 1 "10uF 35V" H 8941 2455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 8850 2500 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/mlcc02_e-1307760.pdf" H 8850 2500 50  0001 C CNN
+F 4 "Taiyo Yuden" H 8850 2500 50  0001 C CNN "Manufacturer_Name"
+F 5 "GMK325BJ106MN-T" H 8850 2500 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "963-GMK325BJ106MN-T" H 8850 2500 50  0001 C CNN "Mouser Part Number"
+	1    8850 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 5CF6FBA4
+P 10100 2450
+F 0 "R5" H 10168 2496 50  0000 L CNN
+F 1 "10K" H 10168 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10140 2440 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/AOA0000C331-1141874.pdf" H 10100 2450 50  0001 C CNN
+F 4 "Yageo" H 10100 2450 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0402FR-0710KL" H 10100 2450 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0402FR-0710KL" H 10100 2450 50  0001 C CNN "Mouser Part Number"
+	1    10100 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R6
+U 1 1 5CF722C2
+P 10800 2150
+F 0 "R6" V 10595 2150 50  0000 C CNN
+F 1 "28.7K 1/16W 1%" V 10686 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10840 2140 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 10800 2150 50  0001 C CNN
+F 4 "Yageo" H 10800 2150 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0402FR-0728K7L" H 10800 2150 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0402FR-0728K7L" H 10800 2150 50  0001 C CNN "Mouser Part Number"
+	1    10800 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5CF73077
+P 9600 3000
+F 0 "R4" H 9668 3046 50  0000 L CNN
+F 1 "15K" H 9668 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9640 2990 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 9600 3000 50  0001 C CNN
+F 4 "Yageo" H 9600 3000 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0402FR-0715KL" H 9600 3000 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0402FR-0715KL" H 9600 3000 50  0001 C CNN "Mouser Part Number"
+	1    9600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky_ALT D3
+U 1 1 5CF74802
+P 10450 2450
+F 0 "D3" V 10404 2529 50  0000 L CNN
+F 1 "B340C/40V, 3A, SMB" V 10495 2529 50  0000 L CNN
+F 2 "Diode_SMD:D_SMC" H 10450 2450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/115/B320BE-B345BE-B320CE-B345CE-1142522.pdf" H 10450 2450 50  0001 C CNN
+F 4 "B340CE-13" H 10450 2450 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "621-B340CE-13" H 10450 2450 50  0001 C CNN "Mouser Part Number"
+F 6 "Diodes Incorporated" H 10450 2450 50  0001 C CNN "Manufacturer_Name"
+	1    10450 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5CF7A9DB
+P 10800 1950
+F 0 "L1" V 10990 1950 50  0000 C CNN
+F 1 "15uH 2.4A" V 10899 1950 50  0000 C CNN
+F 2 "Inductor_SMD:L_Taiyo-Yuden_NR-80xx" H 10800 1950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/396/wound04_e-1290968.pdf" H 10800 1950 50  0001 C CNN
+F 4 "Taiyo Yuden" H 10800 1950 50  0001 C CNN "Manufacturer_Name"
+F 5 "NR8040T150M" H 10800 1950 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "963-NR8040T150M" H 10800 1950 50  0001 C CNN "Mouser Part Number"
+	1    10800 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #GND?
+U 1 1 5CF867E4
+P 10100 3350
+AR Path="/5CF867E4" Ref="#GND?"  Part="1" 
+AR Path="/5CB40B9E/5CF867E4" Ref="#GND017"  Part="1" 
+F 0 "#GND017" H 10100 3350 50  0001 C CNN
+F 1 "GND" H 9800 3250 59  0000 L BNN
+F 2 "" H 10100 3350 50  0001 C CNN
+F 3 "" H 10100 3350 50  0001 C CNN
+	1    10100 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 1950 10100 1950
+Wire Wire Line
+	10450 2300 10450 1950
+Connection ~ 10450 1950
+Wire Wire Line
+	10450 1950 10650 1950
+Wire Wire Line
+	10100 1750 10100 1950
+Connection ~ 10100 1950
+Wire Wire Line
+	10100 1950 10450 1950
+Wire Wire Line
+	9600 1700 9600 1400
+Wire Wire Line
+	9600 1400 10100 1400
+Wire Wire Line
+	10100 1400 10100 1550
+Wire Wire Line
+	9950 2150 10100 2150
+Wire Wire Line
+	10100 2150 10100 2300
+Wire Wire Line
+	10100 2600 10100 3250
+Wire Wire Line
+	10450 2600 10450 3250
+Wire Wire Line
+	10100 2150 10650 2150
+Connection ~ 10100 2150
+Wire Wire Line
+	10950 1950 11100 1950
+Wire Wire Line
+	11100 1950 11100 2150
+Wire Wire Line
+	11100 2150 10950 2150
+Wire Wire Line
+	11100 2150 11100 2350
+Connection ~ 11100 2150
+Wire Wire Line
+	9600 2450 9600 2550
+Wire Wire Line
+	9600 2750 9600 2850
+Wire Wire Line
+	9600 3150 9600 3250
+Wire Wire Line
+	9600 3250 10100 3250
+Connection ~ 10100 3250
+Wire Wire Line
+	10100 3250 10450 3250
+Wire Wire Line
+	10450 3250 11100 3250
+Wire Wire Line
+	11100 3250 11100 2550
+Connection ~ 10450 3250
+Wire Wire Line
+	8850 2400 8850 1950
+Wire Wire Line
+	8850 1950 9150 1950
+Wire Wire Line
+	8850 2600 8850 3250
+Wire Wire Line
+	8850 3250 9400 3250
+Connection ~ 9600 3250
+Wire Wire Line
+	9400 2450 9400 3250
+Connection ~ 9400 3250
+Wire Wire Line
+	9400 3250 9600 3250
+Wire Wire Line
+	11100 1950 11350 1950
+Connection ~ 11100 1950
+NoConn ~ 9150 2150
+Connection ~ 8850 1950
+Wire Wire Line
+	10100 3250 10100 3350
+Wire Wire Line
+	8450 1950 8850 1950
+Wire Wire Line
+	8450 1950 8450 1450
+Connection ~ 8450 1950
+$Comp
+L raspbi-estim:BD9C401EFJ-E2 U5
+U 1 1 5D81CD5A
+P 9500 4350
+F 0 "U5" H 9525 4965 50  0000 C CNN
+F 1 "BD9C401EFJ-E2" H 9525 4874 50  0000 C CNN
+F 2 "Package_SO:HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm" H 9500 3750 50  0001 C CNN
+F 3 "" H 9500 4350 50  0001 C CNN
+F 4 "ROHM Semiconductor" H 9500 4350 50  0001 C CNN "Manufacturer_Name"
+F 5 "BD9C401EFJ-E2" H 9500 4350 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "755-BD9C401EFJ-E2" H 9500 4350 50  0001 C CNN "Mouser Part Number"
+	1    9500 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5D81DC73
+P 8150 4250
+F 0 "C7" H 8242 4296 50  0000 L CNN
+F 1 "10uF 25VDC" H 8242 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 8150 4250 50  0001 C CNN
+F 3 "~" H 8150 4250 50  0001 C CNN
+F 4 "Taiyo Yuden" H 8150 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "TMK316AB7106KL-T" H 8150 4250 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "963-TMK316AB7106KL-T" H 8150 4250 50  0001 C CNN "Mouser Part Number"
+	1    8150 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5D81E877
+P 9300 5350
+F 0 "C10" H 9392 5396 50  0000 L CNN
+F 1 "4700pF" H 9392 5305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9300 5350 50  0001 C CNN
+F 3 "~" H 9300 5350 50  0001 C CNN
+F 4 "KEMET" H 9300 5350 50  0001 C CNN "Manufacturer_Name"
+F 5 "C0402C472K3RACTU" H 9300 5350 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "80-C0402C472K3R" H 9300 5350 50  0001 C CNN "Mouser Part Number"
+	1    9300 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5D81EDB5
+P 8450 4250
+F 0 "C8" H 8542 4296 50  0000 L CNN
+F 1 "0.1uF 50VDC" H 8542 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8450 4250 50  0001 C CNN
+F 3 "~" H 8450 4250 50  0001 C CNN
+F 4 "KEMET" H 8450 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "C0805C104M5RACTU" H 8450 4250 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "80-C0805C104M5R" H 8450 4250 50  0001 C CNN "Mouser Part Number"
+	1    8450 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 5D81F12A
+P 11100 4250
+F 0 "C13" H 11192 4296 50  0000 L CNN
+F 1 "22uF 16V" H 11192 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 11100 4250 50  0001 C CNN
+F 3 "~" H 11100 4250 50  0001 C CNN
+F 4 "Murata" H 11100 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "GRM219R61C226ME15L" H 11100 4250 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "81-GRM219R61C226ME5L" H 11100 4250 50  0001 C CNN "Mouser Part Number"
+	1    11100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5D81F4B5
+P 10800 4250
+F 0 "C11" H 10892 4296 50  0000 L CNN
+F 1 "22uF 16V" H 10892 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10800 4250 50  0001 C CNN
+F 3 "~" H 10800 4250 50  0001 C CNN
+F 4 "Murata" H 10800 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "GRM219R61C226ME15L" H 10800 4250 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "81-GRM219R61C226ME5L" H 10800 4250 50  0001 C CNN "Mouser Part Number"
+	1    10800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R35
+U 1 1 5D81F8E1
+P 9300 4950
+F 0 "R35" H 9368 4996 50  0000 L CNN
+F 1 "12K" H 9368 4905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9340 4940 50  0001 C CNN
+F 3 "~" H 9300 4950 50  0001 C CNN
+F 4 "Yageo" H 9300 4950 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0603FR-0712KL" H 9300 4950 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0603FR-0712KL" H 9300 4950 50  0001 C CNN "Mouser Part Number"
+	1    9300 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R37
+U 1 1 5D82122B
+P 10200 4750
+F 0 "R37" H 10268 4796 50  0000 L CNN
+F 1 "105K" H 10268 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10240 4740 50  0001 C CNN
+F 3 "~" H 10200 4750 50  0001 C CNN
+F 4 "Yageo" H 10200 4750 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0603FR-07105KL" H 10200 4750 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0603FR-07105KL" H 10200 4750 50  0001 C CNN "Mouser Part Number"
+	1    10200 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R36
+U 1 1 5D8215AF
+P 9900 5050
+F 0 "R36" H 9968 5096 50  0000 L CNN
+F 1 "10K" H 9968 5005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9940 5040 50  0001 C CNN
+F 3 "~" H 9900 5050 50  0001 C CNN
+F 4 "Yageo" H 9900 5050 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0402FR-0710KL" H 9900 5050 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0402FR-0710KL" H 9900 5050 50  0001 C CNN "Mouser Part Number"
+	1    9900 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L2
+U 1 1 5D821A76
+P 10450 4000
+F 0 "L2" V 10640 4000 50  0000 C CNN
+F 1 "4.7uH" V 10549 4000 50  0000 C CNN
+F 2 "mk312-smd-footprints:SRN5040TA4R7M" H 10450 4000 50  0001 C CNN
+F 3 "~" H 10450 4000 50  0001 C CNN
+F 4 "Bourns" H 10450 4000 50  0001 C CNN "Manufacturer_Name"
+F 5 "SRN5040TA-4R7M" H 10450 4000 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "652-SRN5040TA-4R7M" H 10450 4000 50  0001 C CNN "Mouser Part Number"
+	1    10450 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5D8226B7
+P 9600 5650
+F 0 "#PWR0101" H 9600 5400 50  0001 C CNN
+F 1 "GND" H 9605 5477 50  0000 C CNN
+F 2 "" H 9600 5650 50  0001 C CNN
+F 3 "" H 9600 5650 50  0001 C CNN
+	1    9600 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4600 9450 4750
+Wire Wire Line
+	9450 4750 9600 4750
+Wire Wire Line
+	9750 4750 9750 4600
+Wire Wire Line
+	9600 4600 9600 4750
+Connection ~ 9600 4750
+Wire Wire Line
+	9600 4750 9750 4750
+Wire Wire Line
+	9300 4800 9300 4600
+Wire Wire Line
+	9300 5100 9300 5250
+Wire Wire Line
+	9300 5450 9300 5550
+Wire Wire Line
+	9300 5550 9600 5550
+Wire Wire Line
+	9900 5200 9900 5550
+Wire Wire Line
+	9600 4750 9600 5550
+Connection ~ 9600 5550
+Wire Wire Line
+	9600 5550 9900 5550
+Wire Wire Line
+	9600 5550 9600 5650
+Wire Wire Line
+	9900 4900 9900 4750
+Wire Wire Line
+	10050 4750 9900 4750
+Connection ~ 9900 4750
+Wire Wire Line
+	9900 4750 9900 4600
+Wire Wire Line
+	10100 4000 10300 4000
+Wire Wire Line
+	10600 4000 10800 4000
+Wire Wire Line
+	10800 4000 10800 4150
+Wire Wire Line
+	10800 4000 11100 4000
+Wire Wire Line
+	11100 4000 11100 4150
+Connection ~ 10800 4000
+Wire Wire Line
+	11100 4000 11600 4000
+Wire Wire Line
+	11600 4000 11600 4750
+Wire Wire Line
+	11600 4750 10350 4750
+Connection ~ 11100 4000
+Wire Wire Line
+	9900 5550 10800 5550
+Wire Wire Line
+	10800 5550 10800 4500
+Wire Wire Line
+	10800 4500 11100 4500
+Wire Wire Line
+	11100 4500 11100 4350
+Connection ~ 9900 5550
+Wire Wire Line
+	10800 4350 10800 4500
+Connection ~ 10800 4500
+Wire Wire Line
+	8450 5550 8450 4550
+Wire Wire Line
+	8450 4550 8150 4550
+Wire Wire Line
+	8150 4550 8150 4350
+Connection ~ 9300 5550
+Wire Wire Line
+	8450 4550 8450 4350
+Connection ~ 8450 4550
+Wire Wire Line
+	8150 4150 8150 4000
+Wire Wire Line
+	8150 4000 8450 4000
+Wire Wire Line
+	8450 4150 8450 4000
+Connection ~ 8450 4000
+$Comp
+L Device:R_US R34
+U 1 1 5D8AB7C9
+P 8750 4200
+F 0 "R34" H 8818 4246 50  0000 L CNN
+F 1 "100K" H 8818 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8790 4190 50  0001 C CNN
+F 3 "~" H 8750 4200 50  0001 C CNN
+F 4 "Yageo" H 8750 4200 50  0001 C CNN "Manufacturer_Name"
+F 5 "RC0402FR-07100KL" H 8750 4200 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "603-RC0402FR-07100KL" H 8750 4200 50  0001 C CNN "Mouser Part Number"
+	1    8750 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 4400 8750 4400
+Wire Wire Line
+	8750 4400 8750 4350
+Wire Wire Line
+	8450 4000 8750 4000
+Wire Wire Line
+	8750 4050 8750 4000
+Connection ~ 8750 4000
+Wire Wire Line
+	8750 4000 8950 4000
+Wire Wire Line
+	8450 5550 9300 5550
+Wire Wire Line
+	8450 2450 8450 4000
+Connection ~ 8450 2450
+$Comp
+L power:+9V #PWR0102
+U 1 1 5D90D42E
+P 11600 3750
+F 0 "#PWR0102" H 11600 3600 50  0001 C CNN
+F 1 "+9V" H 11615 3923 50  0000 C CNN
+F 2 "" H 11600 3750 50  0001 C CNN
+F 3 "" H 11600 3750 50  0001 C CNN
+	1    11600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11600 4000 11600 3750
+Connection ~ 11600 4000
+$Comp
+L SamacSys_Parts:LD29300P2MTR IC1
+U 1 1 5CF8BA9C
+P 3100 2450
+F 0 "IC1" H 3750 2715 50  0000 C CNN
+F 1 "LD29300P2MTR" H 3750 2624 50  0000 C CNN
+F 2 "mk312-smd-footprints:LD29300P2MTR" H 4250 2550 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/6869173P" H 4250 2450 50  0001 L CNN
+F 4 "STMicroelectronics LD29300P2MTR, LDO Voltage Regulator, Adjustable 3A, +/-1%, 2.5  14 Vin, 6-Pin P2PAK/A" H 4250 2350 50  0001 L CNN "Description"
+F 5 "4.8" H 4250 2250 50  0001 L CNN "Height"
+F 6 "STMicroelectronics" H 4250 2150 50  0001 L CNN "Manufacturer_Name"
+F 7 "LD29300P2MTR" H 4250 2050 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "511-LD29300P2MTR" H 4250 1950 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=511-LD29300P2MTR" H 4250 1850 50  0001 L CNN "Mouser Price/Stock"
+F 10 "6869173" H 4250 1750 50  0001 L CNN "RS Part Number"
+F 11 "https://uk.rs-online.com/web/p/products/6869173" H 4250 1650 50  0001 L CNN "RS Price/Stock"
+	1    3100 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2450 2900 2450
+Connection ~ 2650 2450
+Wire Wire Line
+	3100 2550 2900 2550
+Wire Wire Line
+	2900 2550 2900 2450
+Connection ~ 2900 2450
+Wire Wire Line
+	2900 2450 3100 2450
+Wire Wire Line
+	4400 2450 4850 2450
+Wire Wire Line
+	4400 2650 4500 2650
+Wire Wire Line
+	4500 2650 4500 2900
+Wire Wire Line
+	4500 2900 3000 2900
+Wire Wire Line
+	3000 2900 3000 2650
+Wire Wire Line
+	3000 2650 3100 2650
+Wire Wire Line
+	4400 2550 4600 2550
+Wire Wire Line
+	4600 2550 4600 3100
+Wire Wire Line
+	4600 3100 4850 3100
+Wire Wire Line
+	4850 3100 4850 2950
+Wire Wire Line
+	4850 3100 4850 3250
+Connection ~ 4850 3100
+Wire Wire Line
+	4850 2650 4850 2450
+Connection ~ 4850 2450
+Wire Wire Line
+	4850 2450 5150 2450
+Wire Wire Line
+	4850 3550 4850 3650
+Wire Wire Line
+	4500 2900 4500 3650
+Wire Wire Line
+	4500 3650 4850 3650
+Connection ~ 4500 2900
+Connection ~ 4850 3650
+Wire Wire Line
+	4850 3650 4850 3750
+$Comp
+L power:+VSW #PWR0114
+U 1 1 5CFCF8DC
+P 8450 1450
+F 0 "#PWR0114" H 8450 1300 50  0001 C CNN
+F 1 "+VSW" H 8465 1623 50  0000 C CNN
+F 2 "" H 8450 1450 50  0001 C CNN
+F 3 "" H 8450 1450 50  0001 C CNN
+	1    8450 1450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

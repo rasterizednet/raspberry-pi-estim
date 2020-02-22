@@ -1,0 +1,674 @@
+
+estimbreakout.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00803f80  00803f80  000004b0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000320  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .rodata       000000fc  00008320  00000320  000003b4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .bss          00000005  00803f80  00803f80  000004b0  2**0
+                  ALLOC
+  4 .comment      00000030  00000000  00000000  000004b0  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000004e0  2**2
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000078  00000000  00000000  0000051c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00001ce5  00000000  00000000  00000594  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000145e  00000000  00000000  00002279  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000565  00000000  00000000  000036d7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000128  00000000  00000000  00003c3c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00000d0d  00000000  00000000  00003d64  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    00000309  00000000  00000000  00004a71  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000068  00000000  00000000  00004d7a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	19 c0       	rjmp	.+50     	; 0x34 <__ctors_end>
+   2:	28 c0       	rjmp	.+80     	; 0x54 <__bad_interrupt>
+   4:	27 c0       	rjmp	.+78     	; 0x54 <__bad_interrupt>
+   6:	26 c0       	rjmp	.+76     	; 0x54 <__bad_interrupt>
+   8:	25 c0       	rjmp	.+74     	; 0x54 <__bad_interrupt>
+   a:	24 c0       	rjmp	.+72     	; 0x54 <__bad_interrupt>
+   c:	23 c0       	rjmp	.+70     	; 0x54 <__bad_interrupt>
+   e:	22 c0       	rjmp	.+68     	; 0x54 <__bad_interrupt>
+  10:	21 c0       	rjmp	.+66     	; 0x54 <__bad_interrupt>
+  12:	20 c0       	rjmp	.+64     	; 0x54 <__bad_interrupt>
+  14:	1f c0       	rjmp	.+62     	; 0x54 <__bad_interrupt>
+  16:	1e c0       	rjmp	.+60     	; 0x54 <__bad_interrupt>
+  18:	1d c0       	rjmp	.+58     	; 0x54 <__bad_interrupt>
+  1a:	1c c0       	rjmp	.+56     	; 0x54 <__bad_interrupt>
+  1c:	1b c0       	rjmp	.+54     	; 0x54 <__bad_interrupt>
+  1e:	1a c0       	rjmp	.+52     	; 0x54 <__bad_interrupt>
+  20:	19 c0       	rjmp	.+50     	; 0x54 <__bad_interrupt>
+  22:	18 c0       	rjmp	.+48     	; 0x54 <__bad_interrupt>
+  24:	17 c0       	rjmp	.+46     	; 0x54 <__bad_interrupt>
+  26:	16 c0       	rjmp	.+44     	; 0x54 <__bad_interrupt>
+  28:	15 c0       	rjmp	.+42     	; 0x54 <__bad_interrupt>
+  2a:	14 c0       	rjmp	.+40     	; 0x54 <__bad_interrupt>
+  2c:	13 c0       	rjmp	.+38     	; 0x54 <__bad_interrupt>
+  2e:	12 c0       	rjmp	.+36     	; 0x54 <__bad_interrupt>
+  30:	11 c0       	rjmp	.+34     	; 0x54 <__bad_interrupt>
+  32:	10 c0       	rjmp	.+32     	; 0x54 <__bad_interrupt>
+
+00000034 <__ctors_end>:
+  34:	11 24       	eor	r1, r1
+  36:	1f be       	out	0x3f, r1	; 63
+  38:	cf ef       	ldi	r28, 0xFF	; 255
+  3a:	cd bf       	out	0x3d, r28	; 61
+  3c:	df e3       	ldi	r29, 0x3F	; 63
+  3e:	de bf       	out	0x3e, r29	; 62
+
+00000040 <__do_clear_bss>:
+  40:	2f e3       	ldi	r18, 0x3F	; 63
+  42:	a0 e8       	ldi	r26, 0x80	; 128
+  44:	bf e3       	ldi	r27, 0x3F	; 63
+  46:	01 c0       	rjmp	.+2      	; 0x4a <.do_clear_bss_start>
+
+00000048 <.do_clear_bss_loop>:
+  48:	1d 92       	st	X+, r1
+
+0000004a <.do_clear_bss_start>:
+  4a:	a5 38       	cpi	r26, 0x85	; 133
+  4c:	b2 07       	cpc	r27, r18
+  4e:	e1 f7       	brne	.-8      	; 0x48 <.do_clear_bss_loop>
+  50:	0d d1       	rcall	.+538    	; 0x26c <main>
+  52:	64 c1       	rjmp	.+712    	; 0x31c <_exit>
+
+00000054 <__bad_interrupt>:
+  54:	d5 cf       	rjmp	.-86     	; 0x0 <__vectors>
+
+00000056 <readAddr>:
+#define P_ADDR_bm	0x1f
+
+void delayPulse() {
+	uint8_t delay = PULSE_DELAY;
+	while(delay--) {}
+}
+  56:	e0 e0       	ldi	r30, 0x00	; 0
+  58:	f6 e0       	ldi	r31, 0x06	; 6
+  5a:	81 e0       	ldi	r24, 0x01	; 1
+  5c:	80 83       	st	Z, r24
+  5e:	96 e0       	ldi	r25, 0x06	; 6
+  60:	91 83       	std	Z+1, r25	; 0x01
+  62:	97 e5       	ldi	r25, 0x57	; 87
+  64:	92 83       	std	Z+2, r25	; 0x02
+  66:	90 ea       	ldi	r25, 0xA0	; 160
+  68:	93 83       	std	Z+3, r25	; 0x03
+  6a:	80 87       	std	Z+8, r24	; 0x08
+  6c:	83 85       	ldd	r24, Z+11	; 0x0b
+  6e:	80 ff       	sbrs	r24, 0
+  70:	fd cf       	rjmp	.-6      	; 0x6c <readAddr+0x16>
+  72:	e0 e0       	ldi	r30, 0x00	; 0
+  74:	f6 e0       	ldi	r31, 0x06	; 6
+  76:	61 89       	ldd	r22, Z+17	; 0x11
+  78:	80 89       	ldd	r24, Z+16	; 0x10
+  7a:	68 2b       	or	r22, r24
+  7c:	70 e0       	ldi	r23, 0x00	; 0
+  7e:	8e e3       	ldi	r24, 0x3E	; 62
+  80:	28 2f       	mov	r18, r24
+  82:	30 e0       	ldi	r19, 0x00	; 0
+  84:	f9 01       	movw	r30, r18
+  86:	ee 0f       	add	r30, r30
+  88:	ff 1f       	adc	r31, r31
+  8a:	ee 0f       	add	r30, r30
+  8c:	ff 1f       	adc	r31, r31
+  8e:	e0 5e       	subi	r30, 0xE0	; 224
+  90:	fc 47       	sbci	r31, 0x7C	; 124
+  92:	40 81       	ld	r20, Z
+  94:	51 81       	ldd	r21, Z+1	; 0x01
+  96:	46 17       	cp	r20, r22
+  98:	57 07       	cpc	r21, r23
+  9a:	60 f0       	brcs	.+24     	; 0xb4 <readAddr+0x5e>
+  9c:	22 0f       	add	r18, r18
+  9e:	33 1f       	adc	r19, r19
+  a0:	22 0f       	add	r18, r18
+  a2:	33 1f       	adc	r19, r19
+  a4:	f9 01       	movw	r30, r18
+  a6:	e0 5e       	subi	r30, 0xE0	; 224
+  a8:	fc 47       	sbci	r31, 0x7C	; 124
+  aa:	22 81       	ldd	r18, Z+2	; 0x02
+  ac:	33 81       	ldd	r19, Z+3	; 0x03
+  ae:	62 17       	cp	r22, r18
+  b0:	73 07       	cpc	r23, r19
+  b2:	18 f4       	brcc	.+6      	; 0xba <readAddr+0x64>
+  b4:	81 50       	subi	r24, 0x01	; 1
+  b6:	20 f7       	brcc	.-56     	; 0x80 <readAddr+0x2a>
+  b8:	80 e0       	ldi	r24, 0x00	; 0
+  ba:	08 95       	ret
+
+000000bc <initPORT>:
+  bc:	e0 e0       	ldi	r30, 0x00	; 0
+  be:	f4 e0       	ldi	r31, 0x04	; 4
+  c0:	81 81       	ldd	r24, Z+1	; 0x01
+  c2:	80 66       	ori	r24, 0x60	; 96
+  c4:	81 83       	std	Z+1, r24	; 0x01
+  c6:	e0 e2       	ldi	r30, 0x20	; 32
+  c8:	f4 e0       	ldi	r31, 0x04	; 4
+  ca:	81 81       	ldd	r24, Z+1	; 0x01
+  cc:	8c 60       	ori	r24, 0x0C	; 12
+  ce:	81 83       	std	Z+1, r24	; 0x01
+  d0:	08 95       	ret
+
+000000d2 <initTWI>:
+  d2:	e0 e2       	ldi	r30, 0x20	; 32
+  d4:	f4 e0       	ldi	r31, 0x04	; 4
+  d6:	81 81       	ldd	r24, Z+1	; 0x01
+  d8:	83 60       	ori	r24, 0x03	; 3
+  da:	81 83       	std	Z+1, r24	; 0x01
+  dc:	e0 e1       	ldi	r30, 0x10	; 16
+  de:	f8 e0       	ldi	r31, 0x08	; 8
+  e0:	8f ef       	ldi	r24, 0xFF	; 255
+  e2:	86 83       	std	Z+6, r24	; 0x06
+  e4:	81 e1       	ldi	r24, 0x11	; 17
+  e6:	83 83       	std	Z+3, r24	; 0x03
+  e8:	81 ec       	ldi	r24, 0xC1	; 193
+  ea:	87 83       	std	Z+7, r24	; 0x07
+  ec:	85 81       	ldd	r24, Z+5	; 0x05
+  ee:	86 ff       	sbrs	r24, 6
+  f0:	fd cf       	rjmp	.-6      	; 0xec <initTWI+0x1a>
+  f2:	08 95       	ret
+
+000000f4 <initSPI>:
+  f4:	e0 e0       	ldi	r30, 0x00	; 0
+  f6:	f4 e0       	ldi	r31, 0x04	; 4
+  f8:	81 81       	ldd	r24, Z+1	; 0x01
+  fa:	84 60       	ori	r24, 0x04	; 4
+  fc:	81 83       	std	Z+1, r24	; 0x01
+  fe:	81 e2       	ldi	r24, 0x21	; 33
+ 100:	80 93 20 08 	sts	0x0820, r24	; 0x800820 <__TEXT_REGION_LENGTH__+0x700820>
+ 104:	08 95       	ret
+
+00000106 <waitSPI>:
+		writeVoltage(channel, voltages[channel]);
+	}
+}
+
+void waitSPI(void) {
+	while(!(SPI0.INTFLAGS & SPI_RXCIE_bm)){}
+ 106:	e0 e2       	ldi	r30, 0x20	; 32
+ 108:	f8 e0       	ldi	r31, 0x08	; 8
+ 10a:	83 81       	ldd	r24, Z+3	; 0x03
+ 10c:	88 23       	and	r24, r24
+ 10e:	ec f7       	brge	.-6      	; 0x10a <waitSPI+0x4>
+}
+ 110:	08 95       	ret
+
+00000112 <CMD_IO>:
+void delayPulse() {
+	uint8_t delay = PULSE_DELAY;
+	while(delay--) {}
+}
+
+void CMD_IO(uint8_t rw) {
+ 112:	1f 93       	push	r17
+ 114:	cf 93       	push	r28
+ 116:	df 93       	push	r29
+ 118:	18 2f       	mov	r17, r24
+	SPI0.DATA = addr;
+ 11a:	80 91 84 3f 	lds	r24, 0x3F84	; 0x803f84 <addr>
+ 11e:	c0 e2       	ldi	r28, 0x20	; 32
+ 120:	d8 e0       	ldi	r29, 0x08	; 8
+ 122:	8c 83       	std	Y+4, r24	; 0x04
+	
+	waitSPI();
+ 124:	f0 df       	rcall	.-32     	; 0x106 <waitSPI>
+	
+	uint8_t io_data = SPI0.DATA;
+ 126:	8c 81       	ldd	r24, Y+4	; 0x04
+	
+	if(rw) {
+ 128:	11 23       	and	r17, r17
+ 12a:	09 f4       	brne	.+2      	; 0x12e <CMD_IO+0x1c>
+ 12c:	49 c0       	rjmp	.+146    	; 0x1c0 <CMD_IO+0xae>
+		if(io_data & 0x01) {
+ 12e:	28 2f       	mov	r18, r24
+ 130:	21 70       	andi	r18, 0x01	; 1
+ 132:	80 ff       	sbrs	r24, 0
+ 134:	28 c0       	rjmp	.+80     	; 0x186 <CMD_IO+0x74>
+			PORTA.OUTSET = ( PORTA.OUT & 0x9f ) | 0x20;
+ 136:	e0 e0       	ldi	r30, 0x00	; 0
+ 138:	f4 e0       	ldi	r31, 0x04	; 4
+ 13a:	94 81       	ldd	r25, Z+4	; 0x04
+ 13c:	9f 79       	andi	r25, 0x9F	; 159
+ 13e:	90 62       	ori	r25, 0x20	; 32
+ 140:	95 83       	std	Z+5, r25	; 0x05
+		}
+		if(io_data & 0x02) {
+ 142:	98 2f       	mov	r25, r24
+ 144:	92 70       	andi	r25, 0x02	; 2
+ 146:	81 ff       	sbrs	r24, 1
+ 148:	08 c0       	rjmp	.+16     	; 0x15a <CMD_IO+0x48>
+			PORTB.OUTSET = ( PORTB.OUT & 0xf3 ) | 0x04;
+ 14a:	e0 e2       	ldi	r30, 0x20	; 32
+ 14c:	f4 e0       	ldi	r31, 0x04	; 4
+ 14e:	84 81       	ldd	r24, Z+4	; 0x04
+ 150:	83 7f       	andi	r24, 0xF3	; 243
+ 152:	84 60       	ori	r24, 0x04	; 4
+ 154:	85 83       	std	Z+5, r24	; 0x05
+		}
+		delayPulse();
+		
+		if(io_data & 0x01) {
+ 156:	22 23       	and	r18, r18
+ 158:	29 f1       	breq	.+74     	; 0x1a4 <CMD_IO+0x92>
+			PORTA.OUTSET = ( PORTA.OUT & 0x9f ) | 0x40;
+ 15a:	e0 e0       	ldi	r30, 0x00	; 0
+ 15c:	f4 e0       	ldi	r31, 0x04	; 4
+ 15e:	84 81       	ldd	r24, Z+4	; 0x04
+ 160:	8f 79       	andi	r24, 0x9F	; 159
+ 162:	80 64       	ori	r24, 0x40	; 64
+ 164:	85 83       	std	Z+5, r24	; 0x05
+		}
+		if(io_data & 0x02) {
+ 166:	99 23       	and	r25, r25
+ 168:	99 f0       	breq	.+38     	; 0x190 <CMD_IO+0x7e>
+			PORTB.OUTSET = ( PORTB.OUT & 0xf3 ) | 0x08;
+ 16a:	e0 e2       	ldi	r30, 0x20	; 32
+ 16c:	f4 e0       	ldi	r31, 0x04	; 4
+ 16e:	84 81       	ldd	r24, Z+4	; 0x04
+ 170:	83 7f       	andi	r24, 0xF3	; 243
+ 172:	88 60       	ori	r24, 0x08	; 8
+ 174:	85 83       	std	Z+5, r24	; 0x05
+		}
+		delayPulse();
+		
+		if(io_data & 0x01) {
+ 176:	21 11       	cpse	r18, r1
+ 178:	18 c0       	rjmp	.+48     	; 0x1aa <CMD_IO+0x98>
+			PORTA.OUTSET = PORTA.OUT & 0x9f;
+		}
+		if(io_data & 0x02) {
+			PORTB.OUTSET = PORTB.OUT & 0xf3;
+ 17a:	e0 e2       	ldi	r30, 0x20	; 32
+ 17c:	f4 e0       	ldi	r31, 0x04	; 4
+ 17e:	84 81       	ldd	r24, Z+4	; 0x04
+ 180:	83 7f       	andi	r24, 0xF3	; 243
+ 182:	85 83       	std	Z+5, r24	; 0x05
+		}
+	}
+}
+ 184:	1d c0       	rjmp	.+58     	; 0x1c0 <CMD_IO+0xae>
+	
+	if(rw) {
+		if(io_data & 0x01) {
+			PORTA.OUTSET = ( PORTA.OUT & 0x9f ) | 0x20;
+		}
+		if(io_data & 0x02) {
+ 186:	98 2f       	mov	r25, r24
+ 188:	92 70       	andi	r25, 0x02	; 2
+ 18a:	81 fd       	sbrc	r24, 1
+ 18c:	de cf       	rjmp	.-68     	; 0x14a <CMD_IO+0x38>
+ 18e:	18 c0       	rjmp	.+48     	; 0x1c0 <CMD_IO+0xae>
+		if(io_data & 0x02) {
+			PORTB.OUTSET = ( PORTB.OUT & 0xf3 ) | 0x08;
+		}
+		delayPulse();
+		
+		if(io_data & 0x01) {
+ 190:	22 23       	and	r18, r18
+ 192:	b1 f0       	breq	.+44     	; 0x1c0 <CMD_IO+0xae>
+ 194:	10 c0       	rjmp	.+32     	; 0x1b6 <CMD_IO+0xa4>
+		
+		if(io_data & 0x01) {
+			PORTA.OUTSET = ( PORTA.OUT & 0x9f ) | 0x40;
+		}
+		if(io_data & 0x02) {
+			PORTB.OUTSET = ( PORTB.OUT & 0xf3 ) | 0x08;
+ 196:	e0 e2       	ldi	r30, 0x20	; 32
+ 198:	f4 e0       	ldi	r31, 0x04	; 4
+ 19a:	84 81       	ldd	r24, Z+4	; 0x04
+ 19c:	83 7f       	andi	r24, 0xF3	; 243
+ 19e:	88 60       	ori	r24, 0x08	; 8
+ 1a0:	85 83       	std	Z+5, r24	; 0x05
+ 1a2:	eb cf       	rjmp	.-42     	; 0x17a <CMD_IO+0x68>
+		delayPulse();
+		
+		if(io_data & 0x01) {
+			PORTA.OUTSET = ( PORTA.OUT & 0x9f ) | 0x40;
+		}
+		if(io_data & 0x02) {
+ 1a4:	99 23       	and	r25, r25
+ 1a6:	a1 f3       	breq	.-24     	; 0x190 <CMD_IO+0x7e>
+ 1a8:	f6 cf       	rjmp	.-20     	; 0x196 <CMD_IO+0x84>
+			PORTB.OUTSET = ( PORTB.OUT & 0xf3 ) | 0x08;
+		}
+		delayPulse();
+		
+		if(io_data & 0x01) {
+			PORTA.OUTSET = PORTA.OUT & 0x9f;
+ 1aa:	e0 e0       	ldi	r30, 0x00	; 0
+ 1ac:	f4 e0       	ldi	r31, 0x04	; 4
+ 1ae:	84 81       	ldd	r24, Z+4	; 0x04
+ 1b0:	8f 79       	andi	r24, 0x9F	; 159
+ 1b2:	85 83       	std	Z+5, r24	; 0x05
+ 1b4:	e2 cf       	rjmp	.-60     	; 0x17a <CMD_IO+0x68>
+ 1b6:	e0 e0       	ldi	r30, 0x00	; 0
+ 1b8:	f4 e0       	ldi	r31, 0x04	; 4
+ 1ba:	84 81       	ldd	r24, Z+4	; 0x04
+ 1bc:	8f 79       	andi	r24, 0x9F	; 159
+ 1be:	85 83       	std	Z+5, r24	; 0x05
+		}
+		if(io_data & 0x02) {
+			PORTB.OUTSET = PORTB.OUT & 0xf3;
+		}
+	}
+}
+ 1c0:	df 91       	pop	r29
+ 1c2:	cf 91       	pop	r28
+ 1c4:	1f 91       	pop	r17
+ 1c6:	08 95       	ret
+
+000001c8 <waitTWI>:
+void waitSPI(void) {
+	while(!(SPI0.INTFLAGS & SPI_RXCIE_bm)){}
+}
+
+void waitTWI(void) {
+	while (!(TWI0.MSTATUS & TWI_WIF_bm)) {}
+ 1c8:	e0 e1       	ldi	r30, 0x10	; 16
+ 1ca:	f8 e0       	ldi	r31, 0x08	; 8
+ 1cc:	85 81       	ldd	r24, Z+5	; 0x05
+ 1ce:	86 ff       	sbrs	r24, 6
+ 1d0:	fd cf       	rjmp	.-6      	; 0x1cc <waitTWI+0x4>
+}
+ 1d2:	08 95       	ret
+
+000001d4 <ignoreSPI>:
+
+void ignoreSPI(uint8_t count) {
+ 1d4:	cf 93       	push	r28
+	while(count--) {
+ 1d6:	88 23       	and	r24, r24
+ 1d8:	21 f0       	breq	.+8      	; 0x1e2 <ignoreSPI+0xe>
+ 1da:	c8 2f       	mov	r28, r24
+		waitSPI();
+ 1dc:	94 df       	rcall	.-216    	; 0x106 <waitSPI>
+ 1de:	c1 50       	subi	r28, 0x01	; 1
+void waitTWI(void) {
+	while (!(TWI0.MSTATUS & TWI_WIF_bm)) {}
+}
+
+void ignoreSPI(uint8_t count) {
+	while(count--) {
+ 1e0:	e9 f7       	brne	.-6      	; 0x1dc <ignoreSPI+0x8>
+		waitSPI();
+	}
+}
+ 1e2:	cf 91       	pop	r28
+ 1e4:	08 95       	ret
+
+000001e6 <writeVoltage>:
+
+void writeVoltage(uint8_t dac, uint16_t voltage) {
+ 1e6:	0f 93       	push	r16
+ 1e8:	1f 93       	push	r17
+ 1ea:	cf 93       	push	r28
+ 1ec:	df 93       	push	r29
+ 1ee:	16 2f       	mov	r17, r22
+ 1f0:	07 2f       	mov	r16, r23
+	TWI0.MDATA = (dac << 2) | 0x00; // Memory address/Read/Write Command
+ 1f2:	88 0f       	add	r24, r24
+ 1f4:	88 0f       	add	r24, r24
+ 1f6:	c0 e1       	ldi	r28, 0x10	; 16
+ 1f8:	d8 e0       	ldi	r29, 0x08	; 8
+ 1fa:	88 87       	std	Y+8, r24	; 0x08
+	
+	waitTWI();
+ 1fc:	e5 df       	rcall	.-54     	; 0x1c8 <waitTWI>
+	
+	TWI0.MDATA = (uint8_t)(voltage >> 8); // MSB
+ 1fe:	08 87       	std	Y+8, r16	; 0x08
+	
+	waitTWI();
+ 200:	e3 df       	rcall	.-58     	; 0x1c8 <waitTWI>
+			
+	TWI0.MDATA = (uint8_t)(voltage & 0xff); // LSB
+ 202:	18 87       	std	Y+8, r17	; 0x08
+	
+	waitTWI();
+ 204:	e1 df       	rcall	.-62     	; 0x1c8 <waitTWI>
+}
+ 206:	df 91       	pop	r29
+ 208:	cf 91       	pop	r28
+ 20a:	1f 91       	pop	r17
+ 20c:	0f 91       	pop	r16
+ 20e:	08 95       	ret
+
+00000210 <CMD_VOLTAGE>:
+			PORTB.OUTSET = PORTB.OUT & 0xf3;
+		}
+	}
+}
+
+void CMD_VOLTAGE(uint8_t rw, uint8_t channel) {
+ 210:	cf 92       	push	r12
+ 212:	df 92       	push	r13
+ 214:	ef 92       	push	r14
+ 216:	ff 92       	push	r15
+ 218:	0f 93       	push	r16
+ 21a:	1f 93       	push	r17
+ 21c:	cf 93       	push	r28
+ 21e:	df 93       	push	r29
+ 220:	d8 2e       	mov	r13, r24
+	
+	SPI0.DATA = (uint8_t)(voltages[channel] >> 8);
+ 222:	e6 2e       	mov	r14, r22
+ 224:	f1 2c       	mov	r15, r1
+ 226:	87 01       	movw	r16, r14
+ 228:	00 0f       	add	r16, r16
+ 22a:	11 1f       	adc	r17, r17
+ 22c:	00 58       	subi	r16, 0x80	; 128
+ 22e:	10 4c       	sbci	r17, 0xC0	; 192
+ 230:	f8 01       	movw	r30, r16
+ 232:	81 81       	ldd	r24, Z+1	; 0x01
+ 234:	c0 e2       	ldi	r28, 0x20	; 32
+ 236:	d8 e0       	ldi	r29, 0x08	; 8
+ 238:	8c 83       	std	Y+4, r24	; 0x04
+	
+	waitSPI();
+ 23a:	65 df       	rcall	.-310    	; 0x106 <waitSPI>
+	
+	uint16_t volt = SPI0.DATA << 8;
+ 23c:	cc 80       	ldd	r12, Y+4	; 0x04
+	
+	SPI0.DATA = (uint8_t)(voltages[channel] & 0xff);
+ 23e:	f8 01       	movw	r30, r16
+ 240:	80 81       	ld	r24, Z
+ 242:	8c 83       	std	Y+4, r24	; 0x04
+	
+	waitSPI();
+ 244:	60 df       	rcall	.-320    	; 0x106 <waitSPI>
+		
+	volt |= SPI0.DATA;
+ 246:	6c 81       	ldd	r22, Y+4	; 0x04
+	
+	if(rw) {
+ 248:	dd 20       	and	r13, r13
+ 24a:	39 f0       	breq	.+14     	; 0x25a <CMD_VOLTAGE+0x4a>
+	
+	SPI0.DATA = (uint8_t)(voltages[channel] >> 8);
+	
+	waitSPI();
+	
+	uint16_t volt = SPI0.DATA << 8;
+ 24c:	70 e0       	ldi	r23, 0x00	; 0
+	
+	SPI0.DATA = (uint8_t)(voltages[channel] & 0xff);
+	
+	waitSPI();
+		
+	volt |= SPI0.DATA;
+ 24e:	7c 29       	or	r23, r12
+	
+	if(rw) {
+		voltages[channel] = volt;
+ 250:	f8 01       	movw	r30, r16
+ 252:	60 83       	st	Z, r22
+ 254:	71 83       	std	Z+1, r23	; 0x01
+		writeVoltage(channel, voltages[channel]);
+ 256:	c7 01       	movw	r24, r14
+ 258:	c6 df       	rcall	.-116    	; 0x1e6 <writeVoltage>
+	}
+}
+ 25a:	df 91       	pop	r29
+ 25c:	cf 91       	pop	r28
+ 25e:	1f 91       	pop	r17
+ 260:	0f 91       	pop	r16
+ 262:	ff 90       	pop	r15
+ 264:	ef 90       	pop	r14
+ 266:	df 90       	pop	r13
+ 268:	cf 90       	pop	r12
+ 26a:	08 95       	ret
+
+0000026c <main>:
+	waitTWI();
+}
+
+int main(void)
+{
+	initPORT();
+ 26c:	27 df       	rcall	.-434    	; 0xbc <initPORT>
+	addr = readAddr();
+ 26e:	f3 de       	rcall	.-538    	; 0x56 <readAddr>
+ 270:	80 93 84 3f 	sts	0x3F84, r24	; 0x803f84 <addr>
+	initTWI();
+ 274:	2e df       	rcall	.-420    	; 0xd2 <initTWI>
+	initSPI();
+ 276:	3e df       	rcall	.-388    	; 0xf4 <initSPI>
+	
+    while (1) 
+    {
+		waitSPI();
+		
+		uint8_t spi_data = SPI0.DATA;
+ 278:	c0 e2       	ldi	r28, 0x20	; 32
+ 27a:	d8 e0       	ldi	r29, 0x08	; 8
+	initTWI();
+	initSPI();
+	
+    while (1) 
+    {
+		waitSPI();
+ 27c:	44 df       	rcall	.-376    	; 0x106 <waitSPI>
+		
+		uint8_t spi_data = SPI0.DATA;
+ 27e:	8c 81       	ldd	r24, Y+4	; 0x04
+		
+		if ((spi_data & P_ADDR_bm) == addr) {
+ 280:	48 2f       	mov	r20, r24
+ 282:	4f 71       	andi	r20, 0x1F	; 31
+ 284:	50 e0       	ldi	r21, 0x00	; 0
+ 286:	20 91 84 3f 	lds	r18, 0x3F84	; 0x803f84 <addr>
+ 28a:	30 e0       	ldi	r19, 0x00	; 0
+ 28c:	42 17       	cp	r20, r18
+ 28e:	53 07       	cpc	r21, r19
+ 290:	39 f5       	brne	.+78     	; 0x2e0 <main+0x74>
+			switch ((spi_data & P_CMD_bm) >> 5) {
+ 292:	28 2f       	mov	r18, r24
+ 294:	20 76       	andi	r18, 0x60	; 96
+ 296:	30 e0       	ldi	r19, 0x00	; 0
+ 298:	35 95       	asr	r19
+ 29a:	27 95       	ror	r18
+ 29c:	35 95       	asr	r19
+ 29e:	27 95       	ror	r18
+ 2a0:	35 95       	asr	r19
+ 2a2:	27 95       	ror	r18
+ 2a4:	35 95       	asr	r19
+ 2a6:	27 95       	ror	r18
+ 2a8:	35 95       	asr	r19
+ 2aa:	27 95       	ror	r18
+ 2ac:	22 30       	cpi	r18, 0x02	; 2
+ 2ae:	31 05       	cpc	r19, r1
+ 2b0:	59 f0       	breq	.+22     	; 0x2c8 <main+0x5c>
+ 2b2:	23 30       	cpi	r18, 0x03	; 3
+ 2b4:	31 05       	cpc	r19, r1
+ 2b6:	71 f0       	breq	.+28     	; 0x2d4 <main+0x68>
+ 2b8:	21 30       	cpi	r18, 0x01	; 1
+ 2ba:	31 05       	cpc	r19, r1
+ 2bc:	f9 f6       	brne	.-66     	; 0x27c <main+0x10>
+				case 0x01:
+					CMD_IO((spi_data & P_RW_bm) >> 7);
+ 2be:	88 1f       	adc	r24, r24
+ 2c0:	88 27       	eor	r24, r24
+ 2c2:	88 1f       	adc	r24, r24
+ 2c4:	26 df       	rcall	.-436    	; 0x112 <CMD_IO>
+					break;
+ 2c6:	da cf       	rjmp	.-76     	; 0x27c <main+0x10>
+				case 0x02:
+					CMD_VOLTAGE((spi_data & P_RW_bm) >> 7, 0x00);
+ 2c8:	60 e0       	ldi	r22, 0x00	; 0
+ 2ca:	88 1f       	adc	r24, r24
+ 2cc:	88 27       	eor	r24, r24
+ 2ce:	88 1f       	adc	r24, r24
+ 2d0:	9f df       	rcall	.-194    	; 0x210 <CMD_VOLTAGE>
+					break;
+ 2d2:	d4 cf       	rjmp	.-88     	; 0x27c <main+0x10>
+				case 0x03:
+					CMD_VOLTAGE((spi_data & P_RW_bm) >> 7, 0x01);
+ 2d4:	61 e0       	ldi	r22, 0x01	; 1
+ 2d6:	88 1f       	adc	r24, r24
+ 2d8:	88 27       	eor	r24, r24
+ 2da:	88 1f       	adc	r24, r24
+ 2dc:	99 df       	rcall	.-206    	; 0x210 <CMD_VOLTAGE>
+					break;
+ 2de:	ce cf       	rjmp	.-100    	; 0x27c <main+0x10>
+			}
+		} else {
+			switch ((spi_data & P_CMD_bm) >> 5) {
+ 2e0:	80 76       	andi	r24, 0x60	; 96
+ 2e2:	90 e0       	ldi	r25, 0x00	; 0
+ 2e4:	95 95       	asr	r25
+ 2e6:	87 95       	ror	r24
+ 2e8:	95 95       	asr	r25
+ 2ea:	87 95       	ror	r24
+ 2ec:	95 95       	asr	r25
+ 2ee:	87 95       	ror	r24
+ 2f0:	95 95       	asr	r25
+ 2f2:	87 95       	ror	r24
+ 2f4:	95 95       	asr	r25
+ 2f6:	87 95       	ror	r24
+ 2f8:	82 30       	cpi	r24, 0x02	; 2
+ 2fa:	91 05       	cpc	r25, r1
+ 2fc:	49 f0       	breq	.+18     	; 0x310 <main+0xa4>
+ 2fe:	83 30       	cpi	r24, 0x03	; 3
+ 300:	91 05       	cpc	r25, r1
+ 302:	49 f0       	breq	.+18     	; 0x316 <main+0xaa>
+ 304:	01 97       	sbiw	r24, 0x01	; 1
+ 306:	09 f0       	breq	.+2      	; 0x30a <main+0x9e>
+ 308:	b9 cf       	rjmp	.-142    	; 0x27c <main+0x10>
+				case 0x01:
+					ignoreSPI(1);
+ 30a:	81 e0       	ldi	r24, 0x01	; 1
+ 30c:	63 df       	rcall	.-314    	; 0x1d4 <ignoreSPI>
+					break;
+ 30e:	b6 cf       	rjmp	.-148    	; 0x27c <main+0x10>
+				case 0x02:
+					ignoreSPI(2);
+ 310:	82 e0       	ldi	r24, 0x02	; 2
+ 312:	60 df       	rcall	.-320    	; 0x1d4 <ignoreSPI>
+					break;
+ 314:	b3 cf       	rjmp	.-154    	; 0x27c <main+0x10>
+				case 0x03:
+					ignoreSPI(2);
+ 316:	82 e0       	ldi	r24, 0x02	; 2
+ 318:	5d df       	rcall	.-326    	; 0x1d4 <ignoreSPI>
+					break;
+ 31a:	b0 cf       	rjmp	.-160    	; 0x27c <main+0x10>
+
+0000031c <_exit>:
+ 31c:	f8 94       	cli
+
+0000031e <__stop_program>:
+ 31e:	ff cf       	rjmp	.-2      	; 0x31e <__stop_program>

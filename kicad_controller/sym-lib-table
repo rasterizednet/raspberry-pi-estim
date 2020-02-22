@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name mk312)(type Legacy)(uri F:/mk312/mk312.lib)(options "")(descr ""))
+  (lib (name mk312-cache)(type Legacy)(uri F:/mk312/mk312-cache.lib)(options "")(descr ""))
+  (lib (name raspbi-estim)(type Legacy)(uri ${KIPRJMOD}/raspbi-estim.lib)(options "")(descr ""))
+)

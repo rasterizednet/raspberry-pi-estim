@@ -1,0 +1,76 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +9V1
+D Power flag, +9V1
+K power-flag
+$ENDCMP
+#
+$CMP +9V2
+D Power flag, +9V2
+K power-flag
+$ENDCMP
+#
+$CMP 42TL004
+D 42TL004
+K Transformer TL
+F https://www.mouser.com/datasheet/2/449/Yuetone_XC-600127-1212403.pdf
+$ENDCMP
+#
+$CMP Barrel_Jack_MountingPin_Power
+D DC Barrel Jack with a mounting pin
+K DC power barrel jack connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x24_Male_Power
+D Generic connector, single row, 01x24, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP IRF9Z24N
+D MOSFET MOSFT PCh -55V -12A 175mOhm 12.7nC
+K Single P-Channel MOSFET
+F https://www.mouser.com/datasheet/2/196/irf9z24npbf-1227242.pdf
+$ENDCMP
+#
+$CMP IRL520N
+D MOSFET MOSFT 10A 13.3nC 180mOhm LogLvAB
+K Single N-Channel MOSFET
+F http://www.irf.com/product-info/datasheets/data/irl520n.pdf
+$ENDCMP
+#
+$CMP LM2941S
+D 1A LDO Adjustable Regulator  LM2941S
+F http://www.ti.com/lit/ds/symlink/lm2941.pdf
+$ENDCMP
+#
+$CMP LTC1661
+D LTC1661 DAC
+K DAC
+F https://www.analog.com/media/en/technical-documentation/data-sheets/1661fb.pdf
+$ENDCMP
+#
+$CMP NHD-C0216AZ-FSW-GBW
+F https://www.mouser.com/datasheet/2/291/NHD-C0216AZ-FSW-GBW-31543.pdf
+$ENDCMP
+#
+$CMP R_POT_CHASSIS_US
+D Potentiometer w/Chassis, US symbol
+K resistor variable chassis
+F ~
+$ENDCMP
+#
+$CMP R_POT_DUAL_CHASSIS_US
+D Dual Potentiometer w/Chassis, US symbol
+K resistor variable dual chassis
+F ~
+$ENDCMP
+#
+$CMP SW_SPDT_POWER
+D Switch, single pole double throw
+K switch single-pole double-throw spdt ON-ON
+F ~
+$ENDCMP
+#
+#End Doc Library
